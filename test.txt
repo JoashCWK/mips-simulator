@@ -1,0 +1,19 @@
+	addi $s0, $zero, 0
+L1:
+	addi $sp, $sp, -4
+	sw   $s0, 0($sp)
+	addi $s0, $zero, 8
+	add  $t0, $zero, $s0
+	sll  $t1, $t0, 2
+	slt  $t2, $t0, $t1
+	addi $t3, $zero, 2
+	bne  $t2, $zero, L2
+	addi $t3, $zero, -5
+L2:
+	sw   $t3, 0($t1)
+	lw   $t4, 0($t1)
+	j    L3
+	sub  $t5, $t2, $t1
+L3:
+	lw   $s0, 0($sp)
+	addi $sp, $sp, 4

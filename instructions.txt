@@ -1,0 +1,26 @@
+	addi $t0, $zero, 1
+BIG_LOOP:
+	slti $t4, $t0, 100
+	beq  $t4, $zero, END
+	addi $t1, $zero, 1
+	add  $t2, $zero, $t0
+	addi $t3, $zero, 0
+LOOP:
+	and  $t6, $t1, $t0
+	beq  $t6, $t1, IF
+	j    EXIT_IF
+IF:
+	add  $t3, $t3, $t2
+EXIT_IF:
+	sll  $t2, $t2, 1
+	sll  $t1, $t1, 1
+	slt  $t5, $t0, $t1
+	beq  $t5, $zero, LOOP
+EXIT:
+	addi $t7, $t0, -1
+	sll  $t7, $t7, 2
+	add  $t7, $t7, $zero
+	sw   $t3, 0($t7)
+	addi $t0, $t0, 1
+	j    BIG_LOOP
+END:
