@@ -33,3 +33,7 @@ The output that is printed when all instructions are ran is currently tailored f
 Ensure that any new assembly code written in a txt file follows the same format as those in "instructions.txt" or "test.txt"
 
 Change the name of the file being read in the simulator
+
+
+#about instructions.txt
+instructions.txt contains the assembly code that squares the integers 1 to 99 and store them in the processor's memory unit. Check "squareFunct.cpp" for the implementation of this code in c++
