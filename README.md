@@ -7,18 +7,18 @@ The translator is not written very efficiently (might be a bit messy) as the mai
 i.e., the translator is added to aid and simplify the usage of the processor
 
 The simulator is not capable of processing the entire MIPS instruction set. Below is the instruction set that is implemented:
-add rd, rs, rt
-and rd, rs, rt
-slt rd, rs, rt
-sub rd, rs, rt
-sll rd, rt sa
-addi rt, rs, imm
-slti rt, rs, imm
-lw rt, offset(rs)
-sw rt, offset(rs)
-beq rs, rt, offset
-bne rs, rt, offset
-j target
+#add rd, rs, rt
+#and rd, rs, rt
+#slt rd, rs, rt
+#sub rd, rs, rt
+#sll rd, rt sa
+#addi rt, rs, imm
+#slti rt, rs, imm
+#lw rt, offset(rs)
+#sw rt, offset(rs)
+#beq rs, rt, offset
+#bne rs, rt, offset
+#j target
 
 The memory layout of the processor is as follows:
 MemoryText[400]: Text Segment (Program Code)
